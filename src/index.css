@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&family=Rubik:wght@700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #f8f9fa; /* Off-white main background */
+  --color-brand-dark: #111111; /* Deep charcoal text */
+  --color-brand-gold: #c9a050;
+  
+  --font-serif-italic: "Instrument Serif", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+}
+
+/* Premium Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.text-gold {
+  background: linear-gradient(135deg, #c9a050 0%, #ecd08d 50%, #c9a050 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold {
+  background: linear-gradient(135deg, #c9a050 0%, #ecd08d 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a050;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reveal Animation Class */
+.reveal-text {
+  overflow: hidden;
+  display: block;
+}
+
+.hero-headline {
+  font-family: 'Rubik', sans-serif;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
