@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, UtensilsCrossed, Cake, PartyPopper, Gamepad2, BookOpen, Coffee, Sparkles } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, UtensilsCrossed, Cake, Gamepad2, Coffee, Sparkles, Armchair, Tv, Monitor, Wind } from 'lucide-react';
 
 interface ServiceItem {
   title: string;
@@ -18,11 +18,11 @@ const services: ServiceItem[] = [
     title: "Private Screening",
     subtitle: "Your Cinema, Your Rules",
     description: "Experience movies in absolute privacy with a 150-inch 4K Ultra HD cinematic screen and immersive Dolby Atmos surround sound.",
-    longDescription: "Compatible with all major OTT platforms — Netflix, Prime Video, Hotstar, and more. Watch movies, live matches, or your own content on a massive 150-inch screen with crystal-clear 4K visuals and theatre-grade Dolby Atmos surround sound. Every seat in the house is the best seat.",
-    coverImage: "/images/match-screening.png",
-    galleryImages: ["/images/match-screening.png", "/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"],
+    longDescription: "Enjoy your favorite content on a massive 150-inch 4K Ultra HD screen with immersive Dolby Atmos surround sound. Compatible with all major OTT platforms — Netflix, Prime Video, Disney+ Hotstar, Zee5, SonyLiv, Apple TV+, and YouTube. Catch all the action live with IPL matches, World Cup, and your favorite sports. Every seat is a premium luxury experience.",
+    coverImage: "/images/theater.png",
+    galleryImages: ["/images/theater.png", "/images/match-screening.png", "/images/ambiance.png", "/images/img1.jpg", "/images/img2.jpg"],
     num: "01",
-    highlights: ["150-inch 4K Screen", "Dolby Atmos Sound", "All OTT Platforms", "Recliner Chairs"]
+    highlights: ["Massive 150-inch 4K Theatre Screen", "Immersive Dolby Atmos Sound", "Live IPL & All Major OTTs", "Ultra-Premium Luxury Sofas"]
   },
   {
     title: "Birthdays & Anniversaries",
@@ -32,7 +32,7 @@ const services: ServiceItem[] = [
     coverImage: "/images/birthday-setup.jpeg",
     galleryImages: ["/images/birthday-setup.jpeg", "/images/img4.jpg", "/images/img5.jpg", "/images/img6.jpg"],
     num: "02",
-    highlights: ["Free Basic Decoration", "Cake-Cutting Setup", "Surprise Arrangements", "Party Lights & Balloons"]
+    highlights: ["Grand Celebration Decor Included", "Customized Cake-Cutting Setup", "Special Surprise Reveal", "Cinematic Lighting & Music"]
   },
   {
     title: "Private Parties",
@@ -40,29 +40,31 @@ const services: ServiceItem[] = [
     description: "The perfect venue for bride-to-be parties, kitty parties, farewells, and intimate gatherings with a dance floor.",
     longDescription: "Whether it's a bride-to-be celebration, a kitty party with friends, or a farewell for someone special — our private space transforms into whatever you need. Features include a dedicated dance floor, customizable lighting, and a cozy atmosphere. Bring your own playlist and let the party begin.",
     coverImage: "/images/private-party.png",
-    galleryImages: ["/images/private-party.png", "/images/img7.jpg", "/images/img8.jpg", "/images/img9.jpg"],
+    galleryImages: ["/images/private-party.png", "/images/celebration.png", "/images/img7.jpg", "/images/img8.jpg"],
     num: "03",
-    highlights: ["Bride-to-Be Parties", "Kitty Parties", "Farewell Events", "Dance Floor & Music"]
+    highlights: ["Exclusive Bride-to-Be Setup", "Private Kitty Party Venue", "Dedicated Dance Floor", "High-End Audio System"]
   },
   {
     title: "Traditional Functions",
     subtitle: "Heritage Meets Luxury",
     description: "Host traditional ceremonies and family functions in our exclusive private venue, available for a limited number of guests.",
     longDescription: "Celebrate traditional occasions — from poojas and naming ceremonies to small family gatherings — in an intimate, air-conditioned private setting. We keep the guest count limited to preserve the exclusivity of the experience. Outside food is welcome, so you can bring homemade favorites or order from your preferred caterer.",
-    coverImage: "/images/img10.jpg",
-    galleryImages: ["/images/img10.jpg", "/images/img11.jpg", "/images/img12.jpg", "/images/img13.jpg"],
+    coverImage: "/images/ambiance.png",
+    galleryImages: ["/images/ambiance.png", "/images/img10.jpg", "/images/img11.jpg", "/images/img12.jpg"],
     num: "04",
-    highlights: ["Limited Guest Capacity", "Outside Food Allowed", "Air-Conditioned Venue", "Traditional Ceremonies"]
+    highlights: ["Intimate Family Gatherings", "Outside Catering Welcome", "Full AC Comfort", "Traditional Ceremony Setup"]
   }
 ];
 
 const extras = [
   { icon: <UtensilsCrossed size={22} />, label: "Outside Food Allowed", desc: "Bring your own food & beverages — no restrictions" },
+  { icon: <Armchair size={22} />, label: "Luxury Sofa Seating", desc: "Premium plush sofas for maximum comfort & relaxation" },
+  { icon: <Tv size={22} />, label: "All OTT Platforms", desc: "Netflix, Prime, Hotstar, Zee5, SonyLiv, Apple TV+ & more" },
+  { icon: <Monitor size={22} />, label: "Live Matches", desc: "Watch IPL, World Cup & sports on a 150-inch screen" },
+  { icon: <Cake size={22} />, label: "Birthday Special", desc: "Props, sashes, and magical surprises for your day" },
   { icon: <Coffee size={22} />, label: "In-House Café", desc: "Freshly prepared snacks & beverages available" },
-  { icon: <BookOpen size={22} />, label: "Book Section", desc: "A dedicated reading corner for waiting guests" },
   { icon: <Gamepad2 size={22} />, label: "VR & PS Gaming", desc: "Virtual Reality headsets & PlayStation console" },
-  { icon: <Cake size={22} />, label: "Free Basic Décor", desc: "Complimentary decoration for all celebrations" },
-  { icon: <PartyPopper size={22} />, label: "Party Essentials", desc: "Dance floor, balloons, LED lights & music system" },
+  { icon: <Wind size={22} />, label: "Full AC Control", desc: "100% private air-conditioned space for your group" },
 ];
 
 // ─── Image Gallery Modal ───

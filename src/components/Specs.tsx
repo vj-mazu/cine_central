@@ -1,4 +1,4 @@
-import { Maximize, Music, Monitor, Wind, Tv, Armchair } from 'lucide-react';
+import { Maximize, Music, Monitor, Wind, Tv, Armchair, Sparkles, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const specs = [
@@ -7,7 +7,9 @@ const specs = [
   { icon: <Monitor size={24} />, label: "Visuals", value: "4K ULTRA HD", detail: "Crystal-clear HDR Picture" },
   { icon: <Wind size={24} />, label: "Comfort", value: "FULL AC", detail: "100% Private Air-Conditioned" },
   { icon: <Tv size={24} />, label: "Content", value: "ALL OTT", detail: "Netflix, Prime, Hotstar & More" },
-  { icon: <Armchair size={24} />, label: "Seating", value: "RECLINERS", detail: "Premium Recliner Chairs" },
+  { icon: <Sparkles size={24} />, label: "Privacy", value: "100% PRIVATE", detail: "Exclusive Venue for Your Group" },
+  { icon: <Star size={24} />, label: "Ambience", value: "AMBIENT LIGHT", detail: "Customizable Mood Lighting" },
+  { icon: <Armchair size={24} />, label: "Seating", value: "LUXURY SOFAS", detail: "Premium Luxury Sofa Seating" },
 ];
 
 const Specs = () => {

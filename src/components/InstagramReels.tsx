@@ -22,6 +22,13 @@ const reels = [
     coverImage: "/images/img11.jpg",
     title: "Unforgettable Gatherings",
     views: "15.2K"
+  },
+  {
+    id: 4,
+    url: "https://www.instagram.com/reel/DHGY5AABc1J/?igsh=MThjMTV3bnh3aHRsag==",
+    coverImage: "/images/match-screening.png",
+    title: "Live Match Experience",
+    views: "21.5K"
   }
 ];
 
@@ -61,7 +68,7 @@ export const InstagramReels = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {reels.map((reel, index) => (
             <motion.div
               key={reel.id}
@@ -76,9 +83,12 @@ export const InstagramReels = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover="hover"
-                className="relative block aspect-[9/16] rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.08)] ring-2 ring-brand-gold transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_30px_60px_rgba(201,160,80,0.2)]"
+                className="relative block aspect-[9/16] rounded-[2.5rem] p-2 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.08)] ring-1 ring-black/5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_40px_80px_rgba(201,160,80,0.25)]"
               >
-                <div className="relative w-full h-full rounded-[1.85rem] overflow-hidden">
+                {/* Dual Aesthetic Border */}
+                <div className="absolute inset-0 rounded-[2.5rem] ring-2 ring-brand-gold/30 group-hover:ring-brand-gold transition-all duration-500" />
+                
+                <div className="relative w-full h-full rounded-[2rem] overflow-hidden">
                   <motion.img
                     src={reel.coverImage}
                     alt={reel.title}
@@ -90,30 +100,30 @@ export const InstagramReels = () => {
 
                   {/* Instagram Icon Top Right */}
                   <div className="absolute top-6 right-6 text-white/80 group-hover:text-brand-gold transition-colors duration-500">
-                    <Camera size={24} />
+                    <Camera size={20} />
                   </div>
 
                   {/* Play Button Center */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div 
                       variants={{
-                        hover: { scale: 1.1, backgroundColor: "rgba(201,160,80,0.3)", borderColor: "rgba(201,160,80,0.6)" }
+                        hover: { scale: 1.1, backgroundColor: "rgba(201,160,80,0.4)", borderColor: "rgba(201,160,80,0.8)" }
                       }}
-                      className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-all duration-500 shadow-2xl"
+                      className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-all duration-500 shadow-2xl"
                     >
-                      <Play size={24} className="ml-1 fill-white" />
+                      <Play size={20} className="ml-1 fill-white" />
                     </motion.div>
                   </div>
 
                   {/* Content Bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-4 h-[1px] bg-brand-gold" />
-                      <span className="text-white/60 font-sans text-[10px] uppercase tracking-[3px] font-bold">
+                      <span className="text-white/60 font-sans text-[9px] uppercase tracking-[2px] font-bold">
                         {reel.views} Views
                       </span>
                     </div>
-                    <h3 className="text-white font-serif-italic italic text-2xl md:text-3xl font-bold leading-tight group-hover:text-brand-gold transition-colors duration-500">
+                    <h3 className="text-white font-serif-italic italic text-xl font-bold leading-tight group-hover:text-brand-gold transition-colors duration-500">
                       {reel.title}
                     </h3>
                   </div>
@@ -131,7 +141,7 @@ export const InstagramReels = () => {
           className="mt-20 flex flex-col items-center"
         >
           <a
-            href="https://www.instagram.com/cine_central_raichur/"
+            href="https://www.instagram.com/cinecentralraichur/"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center gap-4 bg-brand-dark text-white px-10 py-5 rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl active:scale-95"

@@ -29,7 +29,7 @@ export const Footer = () => {
           </p>
           <div className="flex gap-6 md:gap-8">
             <a 
-              href="https://www.instagram.com/reel/DHGY5AABc1J/?igsh=MTAwMDgyeTVtbWp4bw==" 
+              href="https://www.instagram.com/cinecentralraichur/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white/60 hover:text-brand-gold transition-colors"

@@ -9,6 +9,7 @@ import { InstagramReels } from './components/InstagramReels';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { Footer } from './components/Footer';
 import { Preloader } from './components/Preloader';
+import { Introduction } from './components/Introduction';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Introduction />
         <Specs />
         <Services />
         <Pricing />
