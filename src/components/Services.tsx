@@ -19,8 +19,8 @@ const services: ServiceItem[] = [
     subtitle: "Your Cinema, Your Rules",
     description: "Experience movies in absolute privacy with a 150-inch 4K Ultra HD cinematic screen and immersive Dolby Atmos surround sound.",
     longDescription: "Enjoy your favorite content on a massive 150-inch 4K Ultra HD screen with immersive Dolby Atmos surround sound. Compatible with all major OTT platforms — Netflix, Prime Video, Disney+ Hotstar, Zee5, SonyLiv, Apple TV+, and YouTube. Catch all the action live with IPL matches, World Cup, and your favorite sports. Every seat is a premium luxury experience.",
-    coverImage: "/images/theater.png",
-    galleryImages: ["/images/theater.png", "/images/match-screening.png", "/images/ambiance.png", "/images/img1.jpg", "/images/img2.jpg"],
+    coverImage: "/images/private-screening-main.png",
+    galleryImages: ["/images/private-screening-main.png", "/images/theater.png", "/images/match-screening.png", "/images/ambiance.png", "/images/img1.jpg", "/images/img2.jpg"],
     num: "01",
     highlights: ["Massive 150-inch 4K Theatre Screen", "Immersive Dolby Atmos Sound", "Live IPL & All Major OTTs", "Ultra-Premium Luxury Sofas"]
   },
