@@ -21,7 +21,7 @@ export const Introduction = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-8 left-8">
               <span className="text-white font-serif-italic italic text-2xl md:text-3xl font-bold">
-                Premium Luxury Sofas
+                Premium Luxury Recliners
               </span>
             </div>
           </motion.div>
@@ -54,7 +54,7 @@ export const Introduction = () => {
               transition={{ delay: 0.3 }}
               className="text-brand-dark/70 font-sans text-base md:text-lg leading-relaxed mb-10 font-medium"
             >
-              Forget traditional theatre seats. Our private space is furnished with ultra-premium luxury sofas designed for maximum relaxation. Whether you're watching a blockbuster or a live match, experience it in a cozy, intimate environment that feels like home, but looks like a palace.
+              Forget traditional theatre seats. Our private space is furnished with ultra-premium luxury recliners designed for maximum relaxation. Whether you're watching a blockbuster or a live match, experience it in a cozy, intimate environment that feels like home, but looks like a palace.
             </motion.p>
 
             <div className="grid grid-cols-2 gap-6 mb-12">

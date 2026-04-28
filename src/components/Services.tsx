@@ -22,7 +22,7 @@ const services: ServiceItem[] = [
     coverImage: "/images/private-screening-main.png",
     galleryImages: ["/images/private-screening-main.png", "/images/theater.png", "/images/match-screening.png", "/images/ambiance.png", "/images/img1.jpg", "/images/img2.jpg"],
     num: "01",
-    highlights: ["Massive 150-inch 4K Theatre Screen", "Immersive Dolby Atmos Sound", "Live IPL & All Major OTTs", "Ultra-Premium Luxury Sofas"]
+    highlights: ["Massive 150-inch 4K Theatre Screen", "Immersive Dolby Atmos Sound", "Live IPL & All Major OTTs", "Ultra-Premium Luxury Recliners"]
   },
   {
     title: "Birthdays & Anniversaries",
@@ -58,7 +58,7 @@ const services: ServiceItem[] = [
 
 const extras = [
   { icon: <UtensilsCrossed size={22} />, label: "Outside Food Allowed", desc: "Bring your own food & beverages — no restrictions" },
-  { icon: <Armchair size={22} />, label: "Luxury Sofa Seating", desc: "Premium plush sofas for maximum comfort & relaxation" },
+  { icon: <Armchair size={22} />, label: "Luxury Recliner Seating", desc: "Premium plush recliners for maximum comfort & relaxation" },
   { icon: <Tv size={22} />, label: "All OTT Platforms", desc: "Netflix, Prime, Hotstar, Zee5, SonyLiv, Apple TV+ & more" },
   { icon: <Monitor size={22} />, label: "Live Matches", desc: "Watch IPL, World Cup & sports on a 150-inch screen" },
   { icon: <Cake size={22} />, label: "Birthday Special", desc: "Props, sashes, and magical surprises for your day" },
