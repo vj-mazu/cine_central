@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 
 const WhatsAppIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
   <svg 
@@ -82,19 +82,34 @@ export const Navbar = () => {
                 {link.name}
               </motion.a>
             ))}
-            <motion.a
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1 }}
-              href="https://wa.me/918431005515"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`px-6 xl:px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[2px] flex items-center gap-2 hover:bg-brand-gold hover:text-white hover:scale-105 transition-all duration-300 shadow-sm ${
-                isScrolled ? 'bg-brand-dark text-white' : 'bg-white text-black'
-              }`}
-            >
-              Reserve <WhatsAppIcon size={14} />
-            </motion.a>
+            <div className="flex items-center gap-4">
+              <motion.a
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.9 }}
+                href="https://www.instagram.com/cinecentral36raichur?igsh=bzg4cmQ0dXN4anhu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-2 transition-all duration-300 hover:scale-110 ${
+                  isScrolled ? 'text-brand-dark/60 hover:text-brand-dark' : 'text-white/70 hover:text-white'
+                }`}
+              >
+                <Instagram size={18} />
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1 }}
+                href="https://wa.me/918431005515"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`px-6 xl:px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[2px] flex items-center gap-2 hover:bg-brand-gold hover:text-white hover:scale-105 transition-all duration-300 shadow-sm ${
+                  isScrolled ? 'bg-brand-dark text-white' : 'bg-white text-black'
+                }`}
+              >
+                Reserve <WhatsAppIcon size={14} />
+              </motion.a>
+            </div>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -150,6 +165,17 @@ export const Navbar = () => {
                className="relative z-10 mt-4 text-brand-gold font-sans text-xs uppercase tracking-[5px] border-b border-brand-gold/30 pb-2 font-bold"
              >
                Book Now
+             </motion.a>
+             <motion.a
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+               transition={{ delay: 0.7 }}
+               href="https://www.instagram.com/cinecentral36raichur?igsh=bzg4cmQ0dXN4anhu"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="relative z-10 mt-6 text-white/70 hover:text-white transition-colors"
+             >
+               <Instagram size={24} />
              </motion.a>
           </motion.div>
         )}
