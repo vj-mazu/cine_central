@@ -195,7 +195,7 @@ const ServiceBlock = ({ service, index, onOpenGallery }: { service: ServiceItem;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className={`text-brand-dark/80 font-sans text-base sm:text-lg leading-relaxed mb-8 max-w-lg font-medium ${isReversed ? 'lg:ml-auto' : ''}`}
+          className={`text-brand-dark/80 font-sans text-base sm:text-lg leading-relaxed mb-8 max-w-lg font-medium line-clamp-3 md:line-clamp-none ${isReversed ? 'lg:ml-auto' : ''}`}
         >
           {service.longDescription}
         </motion.p>

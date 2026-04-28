@@ -60,10 +60,10 @@ export const HorizontalShowcase = () => {
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1.2s] group-hover:scale-105"
+                className="h-full w-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-[1.2s] md:group-hover:scale-105"
               />
               {/* Title overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 md:p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 md:p-8">
                 <span className="text-white font-serif-italic italic text-xl md:text-2xl">
                   {item.title}
                 </span>

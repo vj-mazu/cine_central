@@ -9,7 +9,7 @@ const specs = [
   { icon: <Tv size={24} />, label: "Content", value: "ALL OTT", detail: "Netflix, Prime, Hotstar & More" },
   { icon: <Sparkles size={24} />, label: "Privacy", value: "100% PRIVATE", detail: "Exclusive Venue for Your Group" },
   { icon: <Star size={24} />, label: "Ambience", value: "AMBIENT LIGHT", detail: "Customizable Mood Lighting" },
-  { icon: <Armchair size={24} />, label: "Seating", value: "LUXURY SOFAS", detail: "Premium Luxury Sofa Seating" },
+  { icon: <Armchair size={24} />, label: "Seating", value: "LUXURY RECLINERS", detail: "Premium Luxury Recliner Seating" },
 ];
 
 const Specs = () => {
@@ -31,7 +31,7 @@ const Specs = () => {
           </span>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-black/5 rounded-2xl overflow-hidden border border-black/5 shadow-sm">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-black/5 rounded-2xl overflow-hidden border border-black/5 shadow-sm">
           {specs.map((spec, index) => (
             <motion.div
               key={index}

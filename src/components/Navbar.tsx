@@ -43,67 +43,69 @@ export const Navbar = () => {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-xl py-3 md:py-4 shadow-sm'
-          : 'bg-transparent py-5 md:py-8'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
-        <a href="#" className="flex flex-col group">
-          <span className={`text-lg sm:text-xl md:text-2xl font-serif-italic font-black tracking-tighter uppercase italic transition-colors duration-500 ${
-            isScrolled ? 'text-brand-dark group-hover:text-brand-gold' : 'text-white group-hover:text-brand-gold'
-          }`}>
-            CINE CENTRAL
-          </span>
-          <span className="text-[9px] sm:text-[10px] font-sans text-brand-gold tracking-[3px] md:tracking-[4px] uppercase -mt-1 ml-1 font-bold">
-            Raichur
-          </span>
-        </a>
+    <>
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${
+          isScrolled
+            ? 'bg-white/95 backdrop-blur-xl py-3 md:py-4 shadow-sm'
+            : 'bg-transparent py-5 md:py-8'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
+          <a href="#" className="flex flex-col group mt-1">
+            <span className={`text-2xl sm:text-3xl md:text-4xl font-serif-italic font-black tracking-tighter uppercase italic transition-colors duration-500 ${
+              isScrolled ? 'text-brand-dark group-hover:text-brand-gold' : 'text-white group-hover:text-brand-gold'
+            }`}>
+              CINE CENTRAL
+            </span>
+            <span className="text-[10px] sm:text-xs md:text-sm font-sans text-brand-gold tracking-[4px] md:tracking-[6px] uppercase -mt-1 ml-1 font-bold">
+              Raichur
+            </span>
+          </a>
 
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8 xl:gap-12">
-          {navLinks.map((link, i) => (
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-8 xl:gap-12">
+            {navLinks.map((link, i) => (
+              <motion.a
+                key={link.name}
+                href={link.href}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + i * 0.1 }}
+                className={`text-[10px] font-sans font-bold uppercase tracking-[3px] transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-500 ${
+                  isScrolled ? 'text-brand-dark/60 hover:text-brand-dark' : 'text-white/70 hover:text-white'
+                }`}
+              >
+                {link.name}
+              </motion.a>
+            ))}
             <motion.a
-              key={link.name}
-              href={link.href}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 + i * 0.1 }}
-              className={`text-[10px] font-sans font-bold uppercase tracking-[3px] transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-500 ${
-                isScrolled ? 'text-brand-dark/60 hover:text-brand-dark' : 'text-white/70 hover:text-white'
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1 }}
+              href="https://wa.me/918431005515"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-6 xl:px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[2px] flex items-center gap-2 hover:bg-brand-gold hover:text-white hover:scale-105 transition-all duration-300 shadow-sm ${
+                isScrolled ? 'bg-brand-dark text-white' : 'bg-white text-black'
               }`}
             >
-              {link.name}
+              Reserve <WhatsAppIcon size={14} />
             </motion.a>
-          ))}
-          <motion.a
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1 }}
-            href="https://wa.me/918431005515"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-6 xl:px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[2px] flex items-center gap-2 hover:bg-brand-gold hover:text-white hover:scale-105 transition-all duration-300 shadow-sm ${
-              isScrolled ? 'bg-brand-dark text-white' : 'bg-white text-black'
-            }`}
-          >
-            Reserve <WhatsAppIcon size={14} />
-          </motion.a>
-        </div>
+          </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className={`lg:hidden z-50 relative ${isMobileMenuOpen ? 'text-brand-dark' : (isScrolled ? 'text-brand-dark' : 'text-white')}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+          {/* Mobile Menu Toggle */}
+          <button
+            className={`lg:hidden z-50 relative ${isScrolled ? 'text-brand-dark' : 'text-white'}`}
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+      </motion.nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -113,8 +115,20 @@ export const Navbar = () => {
             animate={{ clipPath: 'circle(150% at calc(100% - 40px) 40px)' }}
             exit={{ clipPath: 'circle(0% at calc(100% - 40px) 40px)' }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 lg:hidden bg-brand-bg flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-[100] lg:hidden bg-black/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-8"
           >
+            {/* Close Button */}
+            <button 
+              className="absolute top-6 right-4 sm:right-6 text-white/70 hover:text-white p-2 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <X size={28} />
+            </button>
+
+            {/* Ambient decorative lighting */}
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-gold/10 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-brand-gold/10 rounded-full blur-[80px] pointer-events-none" />
+
             {navLinks.map((link, i) => (
                <motion.a
                  key={link.name}
@@ -122,7 +136,7 @@ export const Navbar = () => {
                  initial={{ opacity: 0, y: 30 }}
                  animate={{ opacity: 1, y: 0 }}
                  transition={{ delay: 0.2 + i * 0.08, duration: 0.5 }}
-                 className="text-3xl sm:text-4xl font-serif-italic text-brand-dark italic hover:text-brand-gold transition-colors font-bold"
+                 className="relative z-10 text-3xl sm:text-4xl font-serif-italic text-white italic hover:text-brand-gold transition-colors font-bold"
                  onClick={() => setIsMobileMenuOpen(false)}
                >
                  {link.name}
@@ -133,13 +147,13 @@ export const Navbar = () => {
                animate={{ opacity: 1 }}
                transition={{ delay: 0.6 }}
                href="https://wa.me/918431005515"
-               className="mt-4 text-brand-gold font-sans text-xs uppercase tracking-[5px] border-b border-brand-gold/30 pb-2 font-bold"
+               className="relative z-10 mt-4 text-brand-gold font-sans text-xs uppercase tracking-[5px] border-b border-brand-gold/30 pb-2 font-bold"
              >
                Book Now
              </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </>
   );
 };

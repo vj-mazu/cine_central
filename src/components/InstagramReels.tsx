@@ -22,13 +22,6 @@ const reels = [
     coverImage: "/images/img11.jpg",
     title: "Unforgettable Gatherings",
     views: "15.2K"
-  },
-  {
-    id: 4,
-    url: "https://www.instagram.com/reel/DHGY5AABc1J/?igsh=MThjMTV3bnh3aHRsag==",
-    coverImage: "/images/match-screening.png",
-    title: "Live Match Experience",
-    views: "21.5K"
   }
 ];
 
@@ -68,7 +61,7 @@ export const InstagramReels = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {reels.map((reel, index) => (
             <motion.div
               key={reel.id}
